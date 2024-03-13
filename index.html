@@ -1,233 +1,395 @@
 <!DOCTYPE html>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ade's Portfolio</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./assets/about-pic.png" type="image/x-icon" />
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper" class="fade-in">
-      <!-- Intro -->
-      <div id="intro">
-        <h1>Adedamola Adesoye<br /></h1>
-        <p>
-          MSIS student at Northeastern University, Toronto.<br />Enjoys working
-          with data, writing code and engineering pipelines.<br />Possesses
-          hands-on experience in training and evaluating machine learning models.
-        </p>
-        <ul class="actions">
-          <li>
-            <a
-              href="#header"
-              class="button icon solid solo fa-arrow-down scrolly"
-              >Continue</a
-            >
-          </li>
+  <body>
+    <nav id="desktop-nav" >
+      <div class="logo">Adedamola Adesoye</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skill Set</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-
-      <!-- Header -->
-      <header id="header">
-        <a href="#header" class="logo">Ade</a>
-      </header>
-
-      <!-- Nav -->
-      <nav id="nav">
-        <ul class="links">
-          <li class="active"><a href="#main">Projects</a></li>
-          <li><a href="https://drive.google.com/file/d/13BgM9TCJ58qEUisK__q4SzRoF9R5IPOa/view?usp=sharing"target="_blank">Resume</a></li>
-    
-        </ul>
-        <ul class="icons">
-          <li>
-            <a href="https://www.linkedin.com/in/adedamolade/"target="_blank" class="icon brands fa-linkedin"
-              ><span class="label">LinkedIn</span></a
-            >
-          </li>
+        
           
-          <li>
-            <a href="https://github.com/adedamola26"target="_blank" class="icon brands fa-github"
-              ><span class="label">GitHub</span></a
-            >
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Main -->
-      <div id="main">
-        <!-- Featured Post -->
-        <article class="post featured">
-          <header class="major">
-            <h2>
-              <a
-                href="https://github.com/adedamola26/data-pipeline-4-online-retail?tab=readme-ov-file#result"
+      </div>
+      
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Adedamola Adesoye</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skill Set</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Ade's profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Ade</h1>
+        <p class="section__text__p2">MSIS Student | Data Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('https://drive.google.com/file/d/13BgM9TCJ58qEUisK__q4SzRoF9R5IPOa/view?usp=sharing')"
+          >
+            Résumé
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="window.open('https://www.linkedin.com/in/adedamolade/')"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="window.open('https://github.com/adedamola26')"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Expected April 2025</h3>
+              <p>MSc<br />Information Systems <br />@<br/>Northeastern University, Toronto</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>2015-2020</h3>
+              <p>
+                BEng<br />Electrical/Electronics Engineering<br />@</br>Afe-Babalola
+                University
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              After completing my Bachelor's degree, I transitioned to the field of data
+              after reading articles (<a
+                href="https://www.nytimes.com/2019/05/22/magazine/soccer-data-liverpool.html"
                 target="_blank"
-                >End-to-End<br />
-                Airflow-Based Data Pipeline</a
-              >
-            </h2>
-            <p>
-            Implemented an Airflow-based data pipeline, leveraging a REST API for data extraction and preparation, 
-            with the ultimate goal of generating reports tailored for a dashboard</p>
-              
-            </p>
-          </header>
-          <a href="https://github.com/adedamola26/data-pipeline-4-online-retail?tab=readme-ov-file#result"
-                target="_blank" class="image main"
-            ><img src="images/pipeline.png" alt=""
-          /></a>
-          <ul class="actions special">
-            <li>
-              <a
-                href="https://github.com/adedamola26/data-pipeline-4-online-retail?tab=readme-ov-file#result"
-                target="_blank"
-                class="button large"
-                >Watch Demo</a
-              >
-            </li>
-          </ul>
-        </article>
-
-        <!-- Posts -->
-        <section class="posts">
-          <article>
-            <header>
-              
-              <h2>
-                <a href="https://github.com/adedamola26/web-scraping-project/blob/main/fbref-scraping.ipynb"target="_blank"
-                  >Web Scraper For Extracting EPL Football Players’ Data<br />
-                  </a
-                >
-              </h2>
-            </header>
-            <a href="https://github.com/adedamola26/web-scraping-project/blob/main/fbref-scraping.ipynb"target="_blank" class="image fit"
-              ><img src="images/web-scraping.png" alt=""
-            /></a>
-            <p>
-              Utilized Python and associated libraries to conduct web scraping, 
-              extracting comprehensive data on players from all 20 English Premier League teams
-            </p>
-            <ul class="actions special">
-              <li><a href="https://github.com/adedamola26/web-scraping-project/blob/main/fbref-scraping.ipynb"target="_blank" class="button">View Project</a></li>
-            </ul>
-          </article>
-          <article>
-            <header>
-            
-              <h2>
-                <a href="https://github.com/adedamola26/spotify-api"target="_blank"
-                  >Data Pipeline For Creating Four 3NF Datasets Using Spotify API and AWS</a
-                >
-              </h2>
-            </header>
-            <a href="https://github.com/adedamola26/spotify-api"target="_blank" class="image fit"
-              ><img src="images/architecture.png" alt=""
-            /></a>
-            <p>
-              Designed and implemented four datasets, 
-              ensuring normalization up to the third normal form, by analyzing Spotify's top 100 most streamed songs playlist
-            </p>
-            <ul class="actions special">
-              <li><a href="https://github.com/adedamola26/spotify-api"target="_blank" class="button">View Project</a></li>
-            </ul>
-          </article>
-        </section>
-
-        <article class="post featured">
-          <header class="major">
-            <h2>
-              
-                Other<br />
-                Projects
-            </h2>
-            <p>
+                >like this one</a
+              >) about my favorite football team. The articles highlighted how the team innovatively
+              used data to rapidly elevate their status, all while operating on a relatively tight budget.
               <br />
-        <p>Click the image below to see more.</p>
+
+              My several data science project endeavours made me realize my
+              passion for the data preparation stage of a project life cycle
+              which has prompted my transition to the field of data engineering.
               
+              Despite the recent nature of this shift, I've gained proficiency in 
+              implementing key concepts such as data warehouse design, database normalization,
+               and orchestrating pipelines with Airflow. In my spare time, I am actively learning and growing in this
+              field.<br />
+               Currently, I am on a co-op search, aiming to accelerate my growth and contribute 
+              to my employer's business intelligence efforts. I thrive both independently and in 
+              collaborative environments, taking ownership of projects.
             </p>
-          </header>
-          <a href="https://github.com/adedamola26"
-                target="_blank" class="image main"
-            ><img src="images/github.png" alt=""
-          /></a>
-          <ul class="actions special">
-            <li>
-              <a
-                href="https://github.com/adedamola26"
-                target="_blank"
-                class="button large"
-                >See More</a
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skill Set</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Technologies</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p></p>                  
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Postgres, MySQL</p>                    
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Linux</h3>
+                  <p>Ubuntu</p>            
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>GCP</h3>
+                  <p>BigQuery, CloudStorage</p>                   
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Airflow</h3>                  
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>AWS</h3>
+                  <p>S3, Lambda, CloudWatch</p> 
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>NoSQL</h3> 
+                  <p>MongoDB</p>                 
+                </div>
+              </article>
+            </div>
+          </div>
+
+          
+          <div class="details-container">
+            <h2 class="experience-sub-title">Concepts</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Database Normalization</h3>
+                 
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Object Oriented Programming</h3>
+                 
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Warehousing ETL</h3>                  
+                </div>
+              </article>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Most Recent</p>
+      <h1 class="title">Side Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Linux<br/>Calculator</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/adedamola26/linux-projects/tree/main/calculator')"
               >
-            </li>
+                Github
+              </button>
+              
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">End-to-End<br/>Data Pipeline</h2>
+            <div class="btn-container">
+              
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/adedamola26/data-pipeline-4-online-retail?tab=readme-ov-file#end-to-end-data-pipeline-for-an-e-rerail-companys-customer-transaction-dataset')"
+              >
+                Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Data Pipeline<br/>Using AWS</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/adedamola26/spotify-api?tab=readme-ov-file#data-pipeline-for-creating-four-3nf-datasets-using-spotify-api-and-aws')"
+              >
+                Github
+              </button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:adesoye.a@northeastern.edu">E-mail </a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/adedamolade/" target="_blank"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Skill Set</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
-        </article>
-
-        
-      </div>
-
-      <!-- Footer -->
-      <footer id="footer">
-        
-        <section class="split contact">
-          <section class="alt">
-            <h3>Location</h3>
-            <p>
-              Toronto ON<br />
-              Canada
-            </p>
-          </section>
-          <section>
-            <h3>Email</h3>
-            <p><a href="mailto:adesoye.a@northeastern.edu">adesoye.a@northeastern.edu</a></p>
-          </section>
-          <section>
-            <h3>Social</h3>
-            <ul class="icons alt">
-              <li>
-                <a href="https://www.linkedin.com/in/adedamolade/"target="_blank" class="icon brands alt fa-linkedin"
-                  ><span class="label">LinkedIn</span></a
-                >
-              </li>
-            
-              <li>
-                <a href="https://github.com/adedamola26"target="_blank" class="icon brands alt fa-github"
-                  ><span class="label">GitHub</span></a
-                >
-              </li>
-            </ul>
-          </section>
-        </section>
-      </footer>
-
-      <!-- Copyright -->
-      <div id="copyright">
-        <ul>
-          <li>&copy; Ade</li>
-          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Adedamola Adesoye. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
